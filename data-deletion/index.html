@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Data Deletion and Local Data Control Guide for RigourLedger: Tax Records — Sovereign on-device data management by Rigour Consulting.">
+  <title>Data Deletion &amp; Local Data Control — RigourLedger: Tax Records</title>
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/rigourledger-mark.svg">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-container">
+      <a href="../" class="brand-link">
+        <img src="../assets/rigourledger-mark.svg" alt="RigourLedger Logo" class="brand-logo">
+        <span>RigourLedger</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../">Home</a></li>
+        <li><a href="../privacy/">Privacy Policy</a></li>
+        <li><a href="../terms/">Terms of Service</a></li>
+        <li><a href="../support/">Support</a></li>
+        <li><a href="./" class="active">Data Control</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <article class="doc-card">
+      <header class="doc-header">
+        <span class="badge">Data Sovereignty</span>
+        <h1>Data Deletion &amp; Local Data Control</h1>
+        <ul class="meta-details">
+          <li><strong>Developer / Publisher:</strong> Rigour Consulting</li>
+          <li><strong>Application:</strong> RigourLedger: Tax Records (<code>au.com.rigourconsulting.rigourledger</code>)</li>
+          <li><strong>Privacy Contact:</strong> <a href="mailto:rigour.consulting@gmail.com">rigour.consulting@gmail.com</a></li>
+          <li><strong>Jurisdiction:</strong> Western Australia, Australia</li>
+        </ul>
+      </header>
+
+      <section>
+        <h2>1. The Local-First Principle: Zero Cloud Accounts</h2>
+        <p>Unlike conventional cloud-based accounting platforms, <strong>RigourLedger does not require, create, or maintain user accounts or cloud databases</strong>. Rigour Consulting operates zero application servers that store your financial transactions, merchant names, bank CSV statements, or receipt images.</p>
+        <div class="callout">
+          <p><strong>What This Means for Data Deletion:</strong> Because all your records reside exclusively inside the private sandboxed storage on your physical personal device, <strong>you have complete, sovereign control over the immediate and permanent deletion of your data</strong>. There is no remote cloud account to cancel and no server database from which your records must be purged by an administrator.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>2. How to Permanently Delete Your Data</h2>
+        <p>You can permanently erase all application data at any time through the following methods:</p>
+
+        <h3>Method A: In-App Reset (Recommended)</h3>
+        <ol>
+          <li>Open <strong>RigourLedger</strong> on your mobile device.</li>
+          <li>Tap the <strong>Settings</strong> icon or tab.</li>
+          <li>Select <strong>Data Management</strong>.</li>
+          <li>Tap <strong>Reset / Delete Local Data</strong> and confirm the prompt.</li>
+        </ol>
+        <p>This action permanently destroys the local SQLCipher encrypted database, cached preferences, receipt images, and encryption keys stored in your device's secure hardware Keystore or Keychain.</p>
+
+        <h3>Method B: Operating System App Storage Clear</h3>
+        <ul>
+          <li><strong>Android:</strong> Go to device <em>Settings &gt; Apps &gt; RigourLedger &gt; Storage &amp; cache &gt; Clear storage (or Clear data)</em>.</li>
+          <li><strong>iOS:</strong> Delete and reinstall the application, or use the in-app Reset function described in Method A.</li>
+        </ul>
+
+        <h3>Method C: Uninstalling the Application</h3>
+        <p>Uninstalling RigourLedger from your device causes the operating system to permanently delete the application's private sandboxed internal storage directory, including all local databases, attached receipts, and temporary image previews.</p>
+      </section>
+
+      <section>
+        <h2>3. Encrypted Backups &amp; Exported Files</h2>
+        <p>If you have previously generated an encrypted backup file (<code>.rlbackup</code>), standard CSV export, or Accountant Pack ZIP:</p>
+        <ul>
+          <li><strong>User Custody:</strong> Exported files are saved to locations you explicitly chose (such as device storage, an external drive, email attachments, or private cloud storage).</li>
+          <li><strong>Managing Exported Copies:</strong> Because Rigour Consulting never receives or hosts your exported files, deleting data inside the App does not automatically erase external files you created. To delete those files, remove them directly from your file manager or cloud drive.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Active Subscriptions Notice</h2>
+        <div class="callout-warning">
+          <p><strong>Important Subscription Note:</strong> Erasing application data or uninstalling the app <strong>does not automatically cancel an active Google Play or Apple App Store subscription</strong>.</p>
+          <p>To cancel an auto-renewing subscription, you must cancel it directly in your platform store settings:</p>
+          <ul>
+            <li><strong>Google Play:</strong> Open <em>Play Store &gt; Profile &gt; Payments &amp; subscriptions &gt; Subscriptions &gt; RigourLedger &gt; Cancel</em>.</li>
+            <li><strong>Apple App Store:</strong> Open <em>Settings &gt; Apple ID &gt; Subscriptions &gt; RigourLedger &gt; Cancel</em>.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>5. Questions &amp; Support</h2>
+        <p>For any questions regarding data management, privacy, or sovereign control in RigourLedger, please contact our support team at <a href="mailto:rigour.consulting@gmail.com">rigour.consulting@gmail.com</a>.</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <ul class="footer-nav">
+      <li><a href="../privacy/">Privacy Policy</a></li>
+      <li><a href="../terms/">Terms of Service</a></li>
+      <li><a href="../support/">Support</a></li>
+      <li><a href="./" class="active">Data Control</a></li>
+    </ul>
+    <p>Publisher: <strong>Rigour Consulting</strong> &bull; Western Australia, Australia</p>
+    <p>&copy; 2026 Rigour Consulting. All rights reserved.</p>
+  </footer>
+</body>
+</html>

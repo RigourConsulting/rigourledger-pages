@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for RigourLedger: Tax Records — A local-first, privacy-by-design Australian tax record-keeping application by Rigour Consulting.">
+  <title>Privacy Policy — RigourLedger: Tax Records</title>
+  <link rel="stylesheet" href="../assets/site.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/rigourledger-mark.svg">
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-container">
+      <a href="../" class="brand-link">
+        <img src="../assets/rigourledger-mark.svg" alt="RigourLedger Logo" class="brand-logo">
+        <span>RigourLedger</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../">Home</a></li>
+        <li><a href="./" class="active">Privacy Policy</a></li>
+        <li><a href="../terms/">Terms of Service</a></li>
+        <li><a href="../support/">Support</a></li>
+        <li><a href="../data-deletion/">Data Control</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <article class="doc-card">
+      <header class="doc-header">
+        <span class="badge">Official Policy</span>
+        <h1>Privacy Policy — RigourLedger: Tax Records</h1>
+        <ul class="meta-details">
+          <li><strong>Effective Date:</strong> September 18, 2026</li>
+          <li><strong>Developer / Publisher:</strong> Rigour Consulting</li>
+          <li><strong>Application:</strong> RigourLedger: Tax Records (<code>au.com.rigourconsulting.rigourledger</code>)</li>
+          <li><strong>Support &amp; Privacy Contact:</strong> <a href="mailto:rigour.consulting@gmail.com">rigour.consulting@gmail.com</a></li>
+          <li><strong>Security Disclosures:</strong> <a href="mailto:security@rigourconsulting.com.au">security@rigourconsulting.com.au</a></li>
+          <li><strong>Jurisdiction:</strong> Western Australia, Australia</li>
+          <li><strong>Canonical Public URL:</strong> <a href="https://rigourconsulting.github.io/rigourledger-pages/privacy/">https://rigourconsulting.github.io/rigourledger-pages/privacy/</a></li>
+        </ul>
+      </header>
+
+      <section>
+        <h2>1. Overview &amp; Local-First Architectural Boundary</h2>
+        <p>Rigour Consulting develops <strong>RigourLedger: Tax Records</strong> ("RigourLedger" or the "App") with a fundamental privacy-by-design architecture: <strong>your financial data belongs to you and remains on your physical personal device</strong>.</p>
+
+        <div class="callout">
+          <h3>Crucial Architectural Boundary</h3>
+          <p><strong>Zero Rigour Financial Backend:</strong> Rigour Consulting operates no application servers, cloud databases, user-tracking infrastructure, or remote ledgers that receive, aggregate, monitor, or store your financial transactions, merchant names, receipt images, or bank statements. Your financial ledger resides strictly in private, sandboxed, encrypted storage on your personal device.</p>
+          <p><strong>Platform Store Services:</strong> When purchasing or managing a RigourLedger Pro subscription, your device communicates directly with the platform store (Google Play Billing on Android or Apple StoreKit on iOS) to process transactions, manage subscriptions, and verify licensing.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>2. Information Processed Locally on Your Device</h2>
+        <p>When you use RigourLedger, the App locally processes only the information you choose to enter or import:</p>
+        <ul>
+          <li><strong>Profile Details:</strong> Optional record-owner name, business or trading names, Australian Business Numbers (ABN) for sole-trader activities, and employer/activity names.</li>
+          <li><strong>Expense &amp; Tax Records:</strong> Transaction dates, merchant names, expenditure amounts, work/business-use apportionment percentages, and notes.</li>
+          <li><strong>Receipt Images &amp; Attachments:</strong> Photographs captured via the device camera or files selected via the native system document picker, stored in sandboxed internal storage.</li>
+          <li><strong>Bank Statement Data:</strong> Transactions imported from user-selected bank CSV files for reconciliation.</li>
+          <li><strong>Evidence Check Assessments:</strong> Completeness evaluations performed strictly on-device.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>3. Tax File Numbers (TFN) Policy</h2>
+        <div class="callout-warning">
+          <p><strong>RigourLedger does not request a Tax File Number (TFN) and does not provide a dedicated TFN field.</strong></p>
+          <p>In accordance with Australian privacy guidance and the <em>Privacy (Tax File Number) Rule 2015</em>, users should <strong>never</strong> enter a Tax File Number into notes, merchant names, or free-text fields.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>4. Device Permissions &amp; On-Device Processing</h2>
+        <p>RigourLedger requests only permissions strictly necessary for user-initiated actions:</p>
+        <ol>
+          <li>
+            <strong>Camera (<code>android.permission.CAMERA</code> / iOS <code>NSCameraUsageDescription</code>):</strong>
+            <p>Requested only when you tap "Take Photo" to capture receipt evidence. Captured images are saved directly into the App's private internal storage (<code>files/receipts/</code>).</p>
+          </li>
+          <li>
+            <strong>On-Device Optical Character Recognition (OCR):</strong>
+            <p>Text recognition is executed on your physical device using on-device machine learning (Google ML Kit on Android). Receipt images and recognised financial text are processed locally and <strong>never</strong> transmitted to external OCR servers or Rigour Consulting.</p>
+            <p>Pursuant to Google's official <em>ML Kit Android Data Disclosure</em>, the bundled Google ML Kit SDK may transmit technical operational diagnostics (latency, API configuration, feature versions, error codes, event types) and device/installation identifiers (device model, OS version, per-installation app instance IDs) directly to Google for SDK stability and usage analytics. User financial records, receipt images, and recognised receipt text are never included.</p>
+          </li>
+          <li>
+            <strong>System Document &amp; Photo Pickers:</strong>
+            <p>RigourLedger utilizes native Android Photo Picker and iOS Document Picker interfaces. The App does <strong>not</strong> request broad external storage access (<code>READ_EXTERNAL_STORAGE</code> and <code>READ_MEDIA_IMAGES</code> are intentionally omitted).</p>
+          </li>
+          <li>
+            <strong>Zero Location / Zero Advertising ID:</strong>
+            <p>The App requests no location permissions and omits the Google Advertising ID (<code>AD_ID</code>) permission.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>5. Platform Billing &amp; Subscription Metadata</h2>
+        <p>Upgrades to RigourLedger Pro are processed directly by Google Play or Apple App Store:</p>
+        <ul>
+          <li><strong>What the Platform Processes:</strong> Google or Apple processes payment methods, account billing identities, and country tax settings under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> or <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>.</li>
+          <li><strong>What RigourLedger Receives:</strong> The App receives only store-returned licensing metadata (product identifier <code>rigourledger_pro_annual</code>, purchase token, purchase state <code>PURCHASED</code> / <code>PENDING</code>, localized pricing) necessary to unlock local Pro features.</li>
+          <li><strong>Zero Payment Card Storage:</strong> Rigour Consulting never collects, receives, or stores credit card, debit card, or banking credentials.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>6. On-Device Security &amp; Encryption Architecture</h2>
+        <p>RigourLedger incorporates certified cryptographic safeguards on your physical device:</p>
+        <ol>
+          <li><strong>SQLCipher Database Encryption:</strong> Local records are encrypted at rest with SQLCipher 256-bit AES in CBC mode (AES-256-CBC) with per-page HMAC-SHA512 integrity verification and PBKDF2 key derivation.</li>
+          <li><strong>Hardware-Backed Key Storage:</strong> Master encryption keys and user PIN credentials are protected by the Android Keystore / iOS Keychain with hardware backing where supported. Cached Pro subscription entitlement metadata is signed with HMAC-SHA256 anchored to the hardware Keystore.</li>
+          <li><strong>Encrypted Backup Container (<code>.rlbackup</code>):</strong> Backups are encrypted using AES-256-GCM authenticated encryption with a user-supplied passphrase, unique 96-bit random IV, authenticated additional data (AAD) header, and PBKDF2-HMAC-SHA256 (600,000 iterations).</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>7. User-Initiated Data Exports</h2>
+        <p>Data leaves your device only when you deliberately initiate an export:</p>
+        <ul>
+          <li><strong>Standard CSV Export:</strong> Free, plain CSV export of financial-year records.</li>
+          <li><strong>Accountant Pack (Pro):</strong> Encapsulated ZIP bundle containing CSV ledgers, receipt images, executive summary PDF, and SHA-256 integrity manifest.</li>
+          <li><strong>Encrypted Backup (Pro):</strong> Password-protected <code>.rlbackup</code> archive.</li>
+        </ul>
+        <p>You choose the destination (email, local folder, private cloud storage) via the operating system sharesheet. The subsequent transmission and storage of exported files are governed by the privacy policy of the destination service provider you choose.</p>
+      </section>
+
+      <section>
+        <h2>8. Third-Party Analytics, Vendor SDK Communications &amp; Tracking</h2>
+        <p><strong>Zero first-party analytics, advertising and user-tracking SDKs:</strong></p>
+        <ul>
+          <li>No Google Analytics / Firebase Analytics</li>
+          <li>No Meta / Facebook SDK</li>
+          <li>No Mixpanel, Segment, or Amplitude</li>
+          <li>No remote crash-reporting SDKs (e.g., Crashlytics, Sentry)</li>
+        </ul>
+        <p><strong>Disclosed vendor/platform communications:</strong></p>
+        <ul>
+          <li><strong>Google ML Kit:</strong> Bundled text recognition processes receipt images 100% locally on-device. Operational telemetry (technical diagnostics and device/instance identifiers) may be transmitted directly to Google by the SDK for performance and stability monitoring pursuant to Google's official <em>ML Kit Android Data Disclosure</em>. Zero receipt images or recognised text are transmitted.</li>
+          <li><strong>Google Play Billing &amp; Apple StoreKit:</strong> Communicates directly with Google Play or Apple App Store servers to process subscriptions, validate purchases, and maintain entitlement states.</li>
+          <li>Rigour Consulting collects and stores no user telemetry.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>9. Data Retention, Sovereign Deletion &amp; Privacy Principles</h2>
+        <ul>
+          <li><strong>Data Sovereignty:</strong> Because records reside exclusively on your phone, you have complete sovereignty over retention and deletion.</li>
+          <li><strong>Local Deletion:</strong> You can permanently erase all local records at any time via Settings &gt; <strong>Data Management</strong> &gt; <strong>Reset / Delete Local Data</strong>, or by uninstalling the application.</li>
+          <li><strong>App Uninstallation:</strong> Uninstalling RigourLedger through Android or iOS Settings removes the application-internal database, files, and sandboxed storage.</li>
+          <li><strong>Subscription Notice:</strong> Deleting local application data or uninstalling the app does not cancel an active Google Play or Apple App Store subscription. Subscriptions must be managed directly in the platform store settings.</li>
+          <li><strong>Privacy Alignment:</strong> RigourLedger is designed to align with the Australian Privacy Principles (APPs) under the <em>Privacy Act 1988</em> (Cth) and international data protection standards through data minimization, purpose limitation, and sovereign user control.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>10. Contact Information &amp; Governing Law</h2>
+        <p>For questions regarding this Privacy Policy or technical data practices:</p>
+        <ul>
+          <li><strong>Developer / Publisher:</strong> Rigour Consulting</li>
+          <li><strong>Support &amp; Privacy Email:</strong> <a href="mailto:rigour.consulting@gmail.com">rigour.consulting@gmail.com</a></li>
+          <li><strong>Security Disclosures:</strong> <a href="mailto:security@rigourconsulting.com.au">security@rigourconsulting.com.au</a></li>
+          <li><strong>Business Location:</strong> Western Australia, Australia</li>
+          <li><strong>Governing Law:</strong> State of Western Australia and Commonwealth of Australia</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <ul class="footer-nav">
+      <li><a href="../privacy/" class="active">Privacy Policy</a></li>
+      <li><a href="../terms/">Terms of Service</a></li>
+      <li><a href="../support/">Support</a></li>
+      <li><a href="../data-deletion/">Data Control</a></li>
+    </ul>
+    <p>Publisher: <strong>Rigour Consulting</strong> &bull; Western Australia, Australia</p>
+    <p>&copy; 2026 Rigour Consulting. All rights reserved.</p>
+  </footer>
+</body>
+</html>
