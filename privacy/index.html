@@ -47,7 +47,7 @@
 
         <div class="callout">
           <h3>Crucial Architectural Boundary</h3>
-          <p><strong>Zero Rigour Financial Backend:</strong> Rigour Consulting operates no application servers, cloud databases, user-tracking infrastructure, or remote ledgers that receive, aggregate, monitor, or store your financial transactions, merchant names, receipt images, or bank statements. Your financial ledger resides strictly in private, sandboxed, encrypted storage on your personal device.</p>
+          <p><strong>Zero Rigour Financial Backend:</strong> Rigour Consulting operates no application servers, cloud databases, user-tracking infrastructure, or remote ledgers that receive, aggregate, monitor, or store your financial transactions, merchant names, receipt images, or bank statements. Financial records are stored in RigourLedger's encrypted local database. Receipt and document files are stored in the application's private sandboxed storage on your personal device.</p>
           <p><strong>Platform Store Services:</strong> When purchasing or managing a RigourLedger Pro subscription, your device communicates directly with the platform store (Google Play Billing on Android or Apple StoreKit on iOS) to process transactions, manage subscriptions, and verify licensing.</p>
         </div>
       </section>
@@ -108,7 +108,7 @@
 
       <section>
         <h2>6. On-Device Security &amp; Encryption Architecture</h2>
-        <p>RigourLedger incorporates certified cryptographic safeguards on your physical device:</p>
+        <p>RigourLedger incorporates local security and cryptographic safeguards on your physical device:</p>
         <ol>
           <li><strong>SQLCipher Database Encryption:</strong> Local records are encrypted at rest with SQLCipher 256-bit AES in CBC mode (AES-256-CBC) with per-page HMAC-SHA512 integrity verification and PBKDF2 key derivation.</li>
           <li><strong>Hardware-Backed Key Storage:</strong> Master encryption keys and user PIN credentials are protected by the Android Keystore / iOS Keychain with hardware backing where supported. Cached Pro subscription entitlement metadata is signed with HMAC-SHA256 anchored to the hardware Keystore.</li>
