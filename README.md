@@ -16,4 +16,4 @@ This repository hosts the public legal, compliance, and customer-facing support 
 **Publisher**: Rigour Consulting  
 **Location**: Western Australia, Australia  
 **Support Contact**: [rigour.consulting@gmail.com](mailto:rigour.consulting@gmail.com)  
-**Security Inquiries**: [security@rigourconsulting.com.au](mailto:security@rigourconsulting.com.au)  
+**Security Inquiries**: [rigour.consulting@gmail.com](mailto:rigour.consulting@gmail.com)  
