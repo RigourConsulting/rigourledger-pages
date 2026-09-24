@@ -82,8 +82,8 @@
           </li>
           <li>
             <strong>On-Device Optical Character Recognition (OCR):</strong>
-            <p>Text recognition is executed on your physical device using on-device machine learning (Apple Vision framework on iOS; Google ML Kit on Android). On iOS, text recognition uses the native Apple Vision framework (<code>VNRecognizeTextRequest</code>) with zero third-party ML SDKs. On Android, Google ML Kit operates on-device. Receipt images and recognised financial text are processed locally and <strong>never</strong> transmitted to external OCR servers or Rigour Consulting.</p>
-            <p>Pursuant to Google's official <em>ML Kit Android Data Disclosure</em>, the bundled Google ML Kit SDK on Android may transmit technical operational diagnostics (latency, API configuration, feature versions, error codes, event types) and device/installation identifiers (device model, OS version, per-installation app instance IDs) directly to Google for SDK stability and usage analytics. User financial records, receipt images, and recognised receipt text are never included. On iOS, native runtime network observation is pending verification on physical device during Mac execution.</p>
+            <p>Text recognition is executed on your physical device using on-device machine learning (Apple Vision framework on iOS; Google ML Kit on Android). On iOS, text recognition uses Apple's native Vision framework (<code>VNRecognizeTextRequest</code>) with zero third-party ML SDKs. On Android, Google ML Kit operates on-device. Receipt images and recognised financial text are processed locally and <strong>never</strong> transmitted to external OCR servers or Rigour Consulting.</p>
+            <p>Pursuant to Google's official <em>ML Kit Android Data Disclosure</em>, the bundled Google ML Kit SDK on Android may transmit technical operational diagnostics (latency, API configuration, feature versions, error codes, event types) and device/installation identifiers (device model, OS version, per-installation app instance IDs) directly to Google for SDK stability and usage analytics. User financial records, receipt images, and recognised receipt text are never included.</p>
           </li>
           <li>
             <strong>System Document &amp; Photo Pickers:</strong>
@@ -101,7 +101,7 @@
         <p>Upgrades to RigourLedger Pro are processed directly by Google Play or Apple App Store:</p>
         <ul>
           <li><strong>What the Platform Processes:</strong> Google or Apple processes payment methods, account billing identities, and country tax settings under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> or <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>.</li>
-          <li><strong>What RigourLedger Receives:</strong> The App receives only store-returned licensing metadata (product identifier <code>rigourledger_pro_annual</code>, purchase token, purchase state <code>PURCHASED</code> / <code>PENDING</code>, localized pricing) necessary to unlock local Pro features.</li>
+          <li><strong>What RigourLedger Receives:</strong> The App receives only store-returned licensing metadata necessary to verify Pro entitlement: for Google Play, product identifier <code>rigourledger_pro_annual</code>, purchase token, purchase state, and localized pricing; for Apple StoreKit, verified transaction status, product identifier, expiration date, and localized pricing.</li>
           <li><strong>Zero Payment Card Storage:</strong> Rigour Consulting never collects, receives, or stores credit card, debit card, or banking credentials.</li>
         </ul>
       </section>
@@ -117,14 +117,19 @@
       </section>
 
       <section>
-        <h2>7. User-Initiated Data Exports</h2>
-        <p>Data leaves your device only when you deliberately initiate an export:</p>
+        <h2>7. Data Exports &amp; Operating System Backups</h2>
+        <p>Financial records, receipts, and user documents leave the App's private local sandboxed storage only through deliberate user action or standard operating system backup mechanisms:</p>
         <ul>
-          <li><strong>Standard CSV Export:</strong> Free, plain CSV export of financial-year records.</li>
-          <li><strong>Accountant Pack (Pro):</strong> Encapsulated ZIP bundle containing CSV ledgers, receipt images, executive summary PDF, and SHA-256 integrity manifest.</li>
-          <li><strong>Encrypted Backup (Pro):</strong> Password-protected <code>.rlbackup</code> archive.</li>
+          <li><strong>Operating System Cloud Backups:</strong> Depending on your personal device settings, standard operating system backup mechanisms (such as Apple iCloud Backup on iOS or Google Android Backup) may include the application's private sandboxed data within your personal cloud account backup. You can manage or disable app-specific cloud backups at any time within your device's operating system settings.</li>
+          <li><strong>User-Initiated Exports:</strong> Data leaves the application when you explicitly export records:
+            <ul>
+              <li><strong>Standard CSV Export:</strong> Free, plain CSV export of financial-year records.</li>
+              <li><strong>Accountant Pack (Pro):</strong> Encapsulated ZIP bundle containing CSV ledgers, receipt images, executive summary PDF, and SHA-256 integrity manifest.</li>
+              <li><strong>Encrypted Backup (Pro):</strong> Password-protected <code>.rlbackup</code> archive.</li>
+            </ul>
+            <p>You choose the destination (email, local folder, private cloud storage) via the operating system sharesheet. The subsequent transmission and storage of exported files are governed by the privacy policy of the destination service provider you choose.</p>
+          </li>
         </ul>
-        <p>You choose the destination (email, local folder, private cloud storage) via the operating system sharesheet. The subsequent transmission and storage of exported files are governed by the privacy policy of the destination service provider you choose.</p>
       </section>
 
       <section>
@@ -139,9 +144,9 @@
         <p><strong>Disclosed vendor/platform communications:</strong></p>
         <ul>
           <li><strong>Google ML Kit (Android):</strong> Bundled text recognition processes receipt images 100% locally on-device. Operational telemetry (technical diagnostics and device/instance identifiers) may be transmitted directly to Google by the SDK for performance and stability monitoring pursuant to Google's official <em>ML Kit Android Data Disclosure</em>. Zero receipt images or recognised text are transmitted.</li>
-          <li><strong>Apple Vision (iOS):</strong> Native Apple Vision framework executes entirely on-device with zero third-party ML SDKs. Runtime network behaviour will be re-verified on physical device during Mac execution.</li>
+          <li><strong>Apple Vision (iOS):</strong> Native Apple Vision framework executes entirely on-device with zero third-party ML SDKs. It transmits no receipt images or financial data to external servers.</li>
           <li><strong>Google Play Billing &amp; Apple StoreKit:</strong> Communicates directly with Google Play or Apple App Store servers to process subscriptions, validate purchases, and maintain entitlement states.</li>
-          <li><strong>Developer-Received Information:</strong> Voluntary customer support emails or technical error inquiries sent to <a href="mailto:rigour.consulting@gmail.com">rigour.consulting@gmail.com</a> are the only information Rigour Consulting ever receives. Such communications are used exclusively to resolve customer support requests and are never shared or sold.</li>
+          <li><strong>Developer-Received Information:</strong> Rigour Consulting operates no central user databases or application telemetry services. Voluntary communications (such as support emails or technical error inquiries sent to <a href="mailto:rigour.consulting@gmail.com">rigour.consulting@gmail.com</a>) are the only user information Rigour Consulting directly receives from users. Standard platform developer consoles (Google Play Console and Apple App Store Connect) provide developers with aggregate, anonymised download counts, crash reports (where users have opted in to share diagnostics with developers), and financial settlement reports in accordance with each platform's developer terms.</li>
           <li><strong>Static Portal Hosting:</strong> This public legal and support portal is statically hosted via GitHub Pages with zero external CDN dependencies, zero tracking cookies, zero analytics scripts, and zero third-party fonts.</li>
         </ul>
       </section>

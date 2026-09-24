@@ -66,15 +66,15 @@
         </ul>
 
         <h3>Method C: Uninstalling the Application</h3>
-        <p>Uninstalling RigourLedger from your device causes the operating system to permanently delete the application's private sandboxed internal storage directory, including all local databases, attached receipts, and temporary image previews.</p>
+        <p>Uninstalling RigourLedger from your device causes the operating system to delete the application's private sandboxed internal storage directory, including local databases, attached receipts, and temporary previews. However, on iOS, standard platform behavior may cause certain operating-system Keychain entries to persist across uninstalls unless cleared via the in-app Reset function (Method A) prior to removal. We recommend performing Method A before uninstalling if you wish to purge all device-held encryption keys.</p>
       </section>
 
       <section>
-        <h2>3. Encrypted Backups &amp; Exported Files</h2>
-        <p>If you have previously generated an encrypted backup file (<code>.rlbackup</code>), standard CSV export, or Accountant Pack ZIP:</p>
+        <h2>3. Encrypted Backups, Exported Files &amp; Operating System Backups</h2>
+        <p>If you have previously exported files or enabled operating-system cloud backups:</p>
         <ul>
-          <li><strong>User Custody:</strong> Exported files are saved to locations you explicitly chose (such as device storage, an external drive, email attachments, or private cloud storage).</li>
-          <li><strong>Managing Exported Copies:</strong> Because Rigour Consulting never receives or hosts your exported files, deleting data inside the App does not automatically erase external files you created. To delete those files, remove them directly from your file manager or cloud drive.</li>
+          <li><strong>User Custody of Exports:</strong> Exported files (standard CSVs, Accountant Pack ZIPs, or encrypted <code>.rlbackup</code> archives) reside in destinations you chose (local storage, flash drives, email, or personal cloud drives). Because Rigour Consulting never receives or hosts your exported files, deleting data inside the App cannot delete external copies. To remove them, delete the files directly from your file manager or cloud storage.</li>
+          <li><strong>Operating System Cloud Backups:</strong> If your mobile device has automatic cloud backups enabled (such as Apple iCloud Backup on iOS or Android Backup on Google Drive), backup snapshots created prior to local deletion may retain application sandboxed data until those backups are overwritten, expire, or are deleted in your device OS account settings.</li>
         </ul>
       </section>
 
