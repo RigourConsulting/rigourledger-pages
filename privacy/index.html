@@ -82,8 +82,8 @@
           </li>
           <li>
             <strong>On-Device Optical Character Recognition (OCR):</strong>
-            <p>Text recognition is executed on your physical device using on-device machine learning (Google ML Kit on Android). Receipt images and recognised financial text are processed locally and <strong>never</strong> transmitted to external OCR servers or Rigour Consulting.</p>
-            <p>Pursuant to Google's official <em>ML Kit Android Data Disclosure</em>, the bundled Google ML Kit SDK may transmit technical operational diagnostics (latency, API configuration, feature versions, error codes, event types) and device/installation identifiers (device model, OS version, per-installation app instance IDs) directly to Google for SDK stability and usage analytics. User financial records, receipt images, and recognised receipt text are never included.</p>
+            <p>Text recognition is executed on your physical device using on-device machine learning (Apple Vision framework on iOS; Google ML Kit on Android). On iOS, text recognition uses the native Apple Vision framework (<code>VNRecognizeTextRequest</code>) with zero third-party ML SDKs. On Android, Google ML Kit operates on-device. Receipt images and recognised financial text are processed locally and <strong>never</strong> transmitted to external OCR servers or Rigour Consulting.</p>
+            <p>Pursuant to Google's official <em>ML Kit Android Data Disclosure</em>, the bundled Google ML Kit SDK on Android may transmit technical operational diagnostics (latency, API configuration, feature versions, error codes, event types) and device/installation identifiers (device model, OS version, per-installation app instance IDs) directly to Google for SDK stability and usage analytics. User financial records, receipt images, and recognised receipt text are never included. On iOS, native runtime network observation is pending verification on physical device during Mac execution.</p>
           </li>
           <li>
             <strong>System Document &amp; Photo Pickers:</strong>
@@ -111,7 +111,7 @@
         <p>RigourLedger incorporates local security and cryptographic safeguards on your physical device:</p>
         <ol>
           <li><strong>SQLCipher Database Encryption:</strong> Local records are encrypted at rest with SQLCipher 256-bit AES in CBC mode (AES-256-CBC) with per-page HMAC-SHA512 integrity verification and PBKDF2 key derivation.</li>
-          <li><strong>Hardware-Backed Key Storage:</strong> Master encryption keys and user PIN credentials are protected by the Android Keystore / iOS Keychain with hardware backing where supported. Cached Pro subscription entitlement metadata is signed with HMAC-SHA256 anchored to the hardware Keystore.</li>
+          <li><strong>System Key Storage:</strong> Master encryption keys and user PIN credentials are protected by the Android Keystore (with hardware backing where supported) or Apple Keychain (configured with <code>kSecAttrAccessibleWhenUnlockedThisDeviceOnly</code>). Cached Pro subscription entitlement metadata is signed with HMAC-SHA256 anchored to the local Keystore or Keychain.</li>
           <li><strong>Encrypted Backup Container (<code>.rlbackup</code>):</strong> Backups are encrypted using AES-256-GCM authenticated encryption with a user-supplied passphrase, unique 96-bit random IV, authenticated additional data (AAD) header, and PBKDF2-HMAC-SHA256 (600,000 iterations).</li>
         </ol>
       </section>
@@ -138,9 +138,11 @@
         </ul>
         <p><strong>Disclosed vendor/platform communications:</strong></p>
         <ul>
-          <li><strong>Google ML Kit:</strong> Bundled text recognition processes receipt images 100% locally on-device. Operational telemetry (technical diagnostics and device/instance identifiers) may be transmitted directly to Google by the SDK for performance and stability monitoring pursuant to Google's official <em>ML Kit Android Data Disclosure</em>. Zero receipt images or recognised text are transmitted.</li>
+          <li><strong>Google ML Kit (Android):</strong> Bundled text recognition processes receipt images 100% locally on-device. Operational telemetry (technical diagnostics and device/instance identifiers) may be transmitted directly to Google by the SDK for performance and stability monitoring pursuant to Google's official <em>ML Kit Android Data Disclosure</em>. Zero receipt images or recognised text are transmitted.</li>
+          <li><strong>Apple Vision (iOS):</strong> Native Apple Vision framework executes entirely on-device with zero third-party ML SDKs. Runtime network behaviour will be re-verified on physical device during Mac execution.</li>
           <li><strong>Google Play Billing &amp; Apple StoreKit:</strong> Communicates directly with Google Play or Apple App Store servers to process subscriptions, validate purchases, and maintain entitlement states.</li>
-          <li>Rigour Consulting collects and stores no user telemetry.</li>
+          <li><strong>Developer-Received Information:</strong> Voluntary customer support emails or technical error inquiries sent to <a href="mailto:rigour.consulting@gmail.com">rigour.consulting@gmail.com</a> are the only information Rigour Consulting ever receives. Such communications are used exclusively to resolve customer support requests and are never shared or sold.</li>
+          <li><strong>Static Portal Hosting:</strong> This public legal and support portal is statically hosted via GitHub Pages with zero external CDN dependencies, zero tracking cookies, zero analytics scripts, and zero third-party fonts.</li>
         </ul>
       </section>
 
